@@ -1,0 +1,32 @@
+.header {
+  background-image: url("../graphics/pattern_header.svg");
+  background-size: cover;
+  // @include backgroundPattern;
+  grid-column: ful-start / ful-end;
+  display: grid;
+  grid-template-columns: 80%;
+  grid-template-rows: repeat(2, min-content);
+  align-content: center;
+  justify-content: center;
+
+  @include respond(tab-port) {
+    grid-template-columns: 70%;
+  }
+
+  &__text-box {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  &__btn-box {
+    display: flex;
+    justify-content: flex-start;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+}

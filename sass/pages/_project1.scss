@@ -1,0 +1,53 @@
+.container-1 {
+  width: 100%;
+  // overflow-x: hidden;
+  display: grid;
+  grid-template-rows: repeat (2, min-content);
+  grid-template-columns:
+    [ful-start] minmax(6rem, 1fr) repeat(
+      10,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    minmax(6rem, 1fr) [ful-end];
+}
+
+::selection {
+  background-color: $color-tertiary;
+  color: $color-primary;
+}
+
+.section-project {
+  padding: 20rem 0 5rem;
+  background-color: $color-primary;
+
+  grid-column: ful-start / ful-end;
+
+  display: grid;
+  grid-template-columns: 1fr 70% 1fr;
+  grid-template-rows: repeat(4, min-content);
+  grid-row-gap: 4rem;
+
+  &__image {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+    display: flex;
+    img {
+      width: 70%;
+      border-radius: 0.4rem;
+      @include shadowWhite-1;
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+    }
+  }
+  //!PROJECT SIDE
+  .btn-box--project {
+    @include respond(tab-port) {
+      flex-direction: column;
+
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+}

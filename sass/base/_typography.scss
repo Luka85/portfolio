@@ -1,0 +1,156 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $color-tertiary;
+}
+
+.heading-primary {
+  font-size: 7rem;
+  font-weight: 400;
+
+  &--main::before {
+    @include headingStyle;
+    top: -2rem;
+    margin-right: 0;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &--main {
+    color: $color-primary;
+    display: block;
+    animation: slide-in-blurred-top 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-fill-mode: backwards;
+
+    @include respond(tab-port) {
+      font-size: 6.3rem;
+    }
+    @include respond(tab-port-sm) {
+      font-size: 5.9rem;
+    }
+    @include respond(phone) {
+      font-size: 6rem;
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+
+    @include respond(phone) {
+      font-size: 6rem;
+    }
+  }
+
+  &--sub {
+    font-size: 5rem;
+    font-weight: 400;
+    position: relative;
+    display: block;
+    color: $color-tertiary;
+    top: 0;
+    margin-bottom: 5rem;
+    animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-fill-mode: backwards;
+
+    @include respond(tab-port) {
+      font-size: 4.5rem;
+    }
+
+    @include respond(tab-port-sm) {
+      font-size: 4rem;
+    }
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+
+  &--sub::after {
+    @include headingStyle;
+    top: -1.5rem;
+    left: 1.5rem;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+}
+
+.text-box {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  &--form {
+    @include respond(tab-port-sm) {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+    }
+  }
+
+  &--projects {
+    @include respond(tab-port) {
+      text-align: center;
+    }
+  }
+
+  //!PROJECT SIDE
+  &--1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  &--2 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+  //!
+}
+
+.heading-secondary {
+  font-size: 5rem;
+  font-weight: 400;
+
+  @include respond(tab-port) {
+    font-size: 4rem;
+  }
+
+  @include respond(phone) {
+    font-size: 3.5rem;
+  }
+
+  &::before {
+    @include headingStyle;
+    top: -1.5rem;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  grid-column: col-start 2;
+
+  &--form {
+    text-align: center;
+
+    &::before {
+      content: "";
+      height: 0;
+      width: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+//!PROJECT SIDE
+.heading-tertiary {
+  font-size: 4rem;
+  font-weight: 500;
+  color: $color-secondary;
+}
+
+.heading-quaternary {
+  font-size: 3rem;
+  font-weight: 400;
+}

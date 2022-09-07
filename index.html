@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="graphics/Logo_gradient.svg"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Luka Kikelj - Front End Developer</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- !NAVIGATION -->
+
+      <div class="navigation">
+        <!-- ?LOGO-->
+        <div class="navigation__logo-box">
+          <img src="graphics/Logo.svg" alt="Logo" class="logo" />
+        </div>
+
+        <!-- ?NAVIGATION MENU -->
+        <div class="navigation__menu">
+          <input
+            type="checkbox"
+            class="navigation__checkbox"
+            id="navi-toggle"
+          />
+          <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+          </label>
+        </div>
+
+        <!-- ?SCROLL UP BUTTON -->
+        <div class="navigation__scroll-box">
+          <button class="navigation__scroll-btn">
+            <svg class="navigation__scroll-icon">
+              <use xlink:href="graphics/sprite.svg#icon-chevrons-up"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- ?NAVIGATION POP UP -->
+      <div class="popup hidden">
+        <nav class="popup__nav">
+          <ul class="popup__list">
+            <li class="popup__item">
+              <a href="#home" class="popup__link"
+                ><svg>
+                  <use xlink:href="graphics/sprite.svg#icon-home"></use></svg
+                >Home</a
+              >
+            </li>
+            <li class="popup__item">
+              <a href="#section-about" class="popup__link"
+                ><svg>
+                  <use xlink:href="graphics/sprite.svg#icon-user"></use></svg
+                >About</a
+              >
+            </li>
+            <li class="popup__item">
+              <a href="#section-skills" class="popup__link"
+                ><svg>
+                  <use
+                    xlink:href="graphics/sprite.svg#icon-dial-pad"
+                  ></use></svg
+                >Skils</a
+              >
+            </li>
+            <li class="popup__item">
+              <a href="#section-projects" class="popup__link"
+                ><svg>
+                  <use xlink:href="graphics/sprite.svg#icon-layers"></use></svg
+                >Projects</a
+              >
+            </li>
+            <li class="popup__item">
+              <a href="#section-form" class="popup__link"
+                ><svg>
+                  <use xlink:href="graphics/sprite.svg#icon-message"></use></svg
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="popup__overlay hidden"></div>
+
+      <!-- !HEADER -->
+      <header class="header" id="home">
+        <!-- ?TEXT BOX -->
+        <div class="header__text-box">
+          <h1 class="heading-primary">
+            <span class="heading-primary--main">
+              Hi there, I'm <span class="heading-primary__name">Luka</span>
+            </span>
+            <span class="heading-primary--sub">Front End Developer</span>
+          </h1>
+        </div>
+        <!-- ?BUTTON BOX -->
+
+        <div class="header__btn-box">
+          <a href="#section-projects" class="btn btn--cta btn--cta-project">
+            My projects
+            <svg class="btn__icon btn__icon--arrow">
+              <use
+                xlink:href="../graphics/sprite.svg#icon-chevron-with-circle-right"
+              ></use>
+            </svg>
+          </a>
+
+          <a href="#section-form" class="btn btn--cta btn--cta-contact">
+            Contact Me
+            <svg class="btn__icon btn__icon--arrow">
+              <use
+                xlink:href="../graphics/sprite.svg#icon-chevron-with-circle-right"
+              ></use>
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <!-- !ABOUT SECTION -->
+      <section class="section-about" id="section-about">
+        <!-- ?TEXT BOX -->
+        <div class="text-box" data-aos="fade-down-left">
+          <h2 class="heading-secondary u-margin-bottom">About Me</h2>
+          <p class="text-box__paragraph">
+            Hi there,<br /><br />
+            I'm Luka Kikelj, I've always been curious how things works behind
+            the scene, especially how websites runs, but I had never really dig
+            in and get my hands dirty, not until February 2021 when I lost my
+            job, since then I try to learn as much as I can and I try to fit a
+            web development, my job, a social life all in my daily routine. I
+            can say that i have never feel so fullfilled after each project that
+            I've done and that's definitely something that I wanna do till the
+            rest of my life. <br /><br />
+            I am seeking a full time job where I can gain my knowledge from
+            other senior developers and help company achieve their goals.
+          </p>
+        </div>
+      </section>
+
+      <!-- !SKILLS SECTION -->
+
+      <section class="section-skills" id="section-skills">
+        <!-- ?TEXT BOX -->
+        <div class="text-box u-text-box-width" data-aos="fade-down-right">
+          <h2 class="heading-secondary u-margin-bottom">My Skills</h2>
+          <p class="text-box__description">
+            Through my studies and projects I've gained an understanding of web
+            development. I dedicated a lot of my free time to deepen my
+            knowledge through various online courses such as The Web Development
+            Bootcamp, Advanced CSS and Sass: Flexbox, Grid, Animations, The
+            Complete Javascript Course.
+          </p>
+        </div>
+
+        <!-- ?ICON BOX -->
+        <div class="icons-box" data-aos="fade-up" data-aos-delay="100">
+          <figure class="icons-box__item icons-box__item--html">
+            <svg class="icons-box__icon">
+              <use xlink:href="graphics/sprite.svg#icon-html-five"></use>
+            </svg>
+            <span class="icons-box__icon-name">HTML</span>
+          </figure>
+          <figure class="icons-box__item icons-box__item--css">
+            <svg class="icons-box__icon">
+              <use xlink:href="graphics/sprite.svg#icon-css3"></use>
+            </svg>
+            <span class="icons-box__icon-name">CSS</span>
+          </figure>
+          <figure class="icons-box__item icons-box__item--sass">
+            <svg class="icons-box__icon">
+              <use xlink:href="graphics/sprite.svg#icon-sass"></use>
+            </svg>
+            <span class="icons-box__icon-name">SASS</span>
+          </figure>
+          <figure class="icons-box__item icons-box__item--js">
+            <svg class="icons-box__icon">
+              <use xlink:href="graphics/sprite.svg#icon-javascript"></use>
+            </svg>
+            <span class="icons-box__icon-name">JS</span>
+          </figure>
+          <figure class="icons-box__item icons-box__item--git">
+            <svg class="icons-box__icon">
+              <use xlink:href="graphics/sprite.svg#icon-git"></use>
+            </svg>
+            <span class="icons-box__icon-name">GIT</span>
+          </figure>
+        </div>
+      </section>
+
+      <!-- !PROJECTS SECTION -->
+
+      <section class="section-projects" id="section-projects">
+        <!-- ?ICON BOX -->
+        <div
+          class="text-box u-text-box-width text-box--projects"
+          data-aos="fade-down-left"
+        >
+          <h2 class="heading-secondary u-margin-bottom">
+            What I've been working on
+          </h2>
+        </div>
+
+        <!-- ?CARD CONTAINER -->
+
+        <div class="card-container" data-aos="fade-up" data-aos-delay="100">
+          <!-- ?CARD  -->
+          <div class="card card--1">
+            <div class="card__picture card__picture--1">&nbsp;</div>
+            <div class="card__heading">
+              <span class="card__heading-span card__heading-span--1"
+                >Tip Calculator App</span
+              >
+            </div>
+            <div class="card__details">
+              <p class="card__details-paragraph">
+                This is a solution to the Tip Calculator App challenge on
+                Frontend Mentor.
+              </p>
+              <a href="project1.html" class="btn btn--cta-card">
+                View Project
+                <svg class="btn__icon btn__icon--arrow">
+                  <use
+                    xlink:href="graphics/sprite.svg#icon-chevron-with-circle-right"
+                  ></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- ?CARD  -->
+          <div class="card card--2">
+            <div class="card__picture card__picture--2">&nbsp;</div>
+            <div class="card__heading">
+              <span class="card__heading-span card__heading-span--2"
+                >Time tracking dashboard</span
+              >
+            </div>
+            <div class="card__details">
+              <p class="card__details-paragraph">
+                This is a solution to the Time tracking dashboard challenge on
+                Frontend Mentor.
+              </p>
+              <a href="project2.html" class="btn btn--cta-card">
+                View Project
+                <svg class="btn__icon btn__icon--arrow">
+                  <use
+                    xlink:href="graphics/sprite.svg#icon-chevron-with-circle-right"
+                  ></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- !FORM SECTION -->
+
+      <section class="section-form" id="section-form">
+        <div
+          class="text-box u-text-box-width text-box--form"
+          data-aos="fade-down-right"
+        >
+          <h2 class="heading-secondary u-margin-bottom heading-secondary--form">
+            Let's Build Something Together
+          </h2>
+        </div>
+
+        <!-- ?FORM  -->
+
+        <form class="form" name="contact" id="contact-form">
+          <!-- ?FORM LEFT  -->
+
+          <div
+            class="form__group form__group--1"
+            data-aos="fade-down-right"
+            data-aos-delay="100"
+          >
+            <input
+              type="text"
+              class="form__input name"
+              placeholder="Full name"
+              id="name"
+              required
+              name="name"
+            />
+            <label for="name" class="form__label">Full Name</label>
+          </div>
+
+          <div
+            class="form__group form__group--2"
+            data-aos="fade-down-right"
+            data-aos-delay="100"
+          >
+            <input
+              type="email"
+              class="form__input email"
+              placeholder="Email address"
+              id="email"
+              required
+              name="email"
+            />
+            <label for="email" class="form__label">Email address</label>
+          </div>
+
+          <div
+            class="form__group form__group--3"
+            data-aos="fade-down-right"
+            data-aos-delay="100"
+          >
+            <textarea
+              class="form__input form__input--3 message"
+              placeholder="Write your message"
+              id="message"
+              required
+              rows="3"
+              name="message"
+            ></textarea>
+            <label for="message" class="form__label form__label--3"
+              >Write your message</label
+            >
+          </div>
+
+          <!-- ?FORM RIGHT  -->
+          <div
+            class="form__right"
+            data-aos="fade-down-left"
+            data-aos-delay="100"
+          >
+            <div class="form__group form__group--4">
+              <p class="form__description">
+                Feel free to reach out if you're looking for a developer, have a
+                question, or just want to connect.
+              </p>
+            </div>
+
+            <button type="submit" class="btn btn--cta btn--form" value="Send">
+              Send a message
+              <svg class="btn__icon btn__icon--arrow">
+                <use
+                  xlink:href="graphics/sprite.svg#icon-chevron-with-circle-right"
+                ></use>
+              </svg>
+            </button>
+
+            <p class="form__succes-message">
+              Thank you for contacting me. I will be in touch with you very
+              soon.
+            </p>
+            <p class="form__failed-message">
+              Sorry something went wrong. Please try again.
+            </p>
+          </div>
+        </form>
+      </section>
+
+      <!-- ! FOOTER-->
+
+      <footer class="footer" id="footer">
+        <div class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#home" class="footer__link">Home</a>
+            </li>
+            <li class="footer__item">
+              <a href="#section-about" class="footer__link">About</a>
+            </li>
+            <li class="footer__item">
+              <a href="#section-skills" class="footer__link">Skills</a>
+            </li>
+            <li class="footer__item">
+              <a href="#section-projects" class="footer__link">Projects</a>
+            </li>
+            <li class="footer__item">
+              <a href="#section-form" class="footer__link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__logo-box">
+          <a href="#home" class="footer__logo-link">
+            <img
+              src="graphics/Logo_gradient.svg"
+              alt="Logo"
+              class="footer__logo"
+            />
+          </a>
+          <a
+            href="https://github.com/Luka85"
+            class="footer__logo-link"
+            target="_blank"
+          >
+            <svg class="footer__logo footer__logo--1">
+              <use xlink:href="graphics/sprite.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer__copyright-box">
+          <p class="footer__copyright">© Luka Kikelj. All Rights Reserved</p>
+        </div>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+        duration: 800,
+        once: true,
+      });
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("KrF3KjY7_3J9u5NCx");
+      })();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

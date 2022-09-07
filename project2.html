@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="graphics/Logo_gradient.svg"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Luka Kikelj - Time Tracker</title>
+  </head>
+  <body>
+    <div class="container-1">
+      <!-- !NAVIGATION -->
+
+      <div class="navigation">
+        <!-- ?LOGO-->
+        <div class="navigation__logo-box">
+          <img src="graphics/Logo_gradient.svg" alt="Logo" class="logo" />
+        </div>
+
+        <!-- ?NAVIGATION MENU -->
+        <div class="navigation__menu">
+          <input
+            type="checkbox"
+            class="navigation__checkbox"
+            id="navi-toggle"
+          />
+          <label
+            for="navi-toggle"
+            class="navigation__button navigation__button--1"
+          >
+            <span class="navigation__icon navigation__icon--1">&nbsp;</span>
+          </label>
+
+          <!-- <div class="navigation__background-container"></div>
+          <div class="navigation__background">&nbsp;</div>
+          <nav class="navigation__nav"> -->
+        </div>
+
+        <!-- ?SCROLL UP BUTTON -->
+        <div class="navigation__scroll-box">
+          <button
+            class="navigation__scroll-btn navigation__scroll-btn--1"
+            id=""
+          >
+            <svg class="navigation__scroll-icon navigation__scroll-icon--1">
+              <use xlink:href="graphics/sprite.svg#icon-chevrons-up"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- ?NAVIGATION POP UP -->
+      <div class="popup hidden">
+        <nav class="popup__nav">
+          <ul class="popup__list">
+            <li class="popup__item">
+              <a href="/#home" class="popup__link"
+                ><svg>
+                  <use xlink:href="graphics/sprite.svg#icon-home"></use></svg
+                >Home</a
+              >
+            </li>
+            <li class="popup__item">
+              <a href="/#section-about" class="popup__link"
+                ><svg>
+                  <use xlink:href="graphics/sprite.svg#icon-user"></use></svg
+                >About</a
+              >
+            </li>
+            <li class="popup__item">
+              <a href="/#section-skills" class="popup__link"
+                ><svg>
+                  <use
+                    xlink:href="graphics/sprite.svg#icon-dial-pad"
+                  ></use></svg
+                >Skils</a
+              >
+            </li>
+            <li class="popup__item">
+              <a href="/#section-projects" class="popup__link"
+                ><svg>
+                  <use xlink:href="graphics/sprite.svg#icon-layers"></use></svg
+                >Projects</a
+              >
+            </li>
+            <li class="popup__item">
+              <a href="/#section-form" class="popup__link"
+                ><svg>
+                  <use xlink:href="graphics/sprite.svg#icon-message"></use></svg
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="popup__overlay hidden"></div>
+
+      <!-- !PROJECT SECTION -->
+
+      <section class="section-project" id="section-project">
+        <!-- ?TEXT BOX -->
+        <div class="text-box u-text-box-width text-box--1">
+          <h3
+            class="heading-tertiary u-margin-bottom"
+            data-aos="fade-down-left"
+            data-aos-delay="100"
+          >
+            Time tracking dashboard
+          </h3>
+          <p
+            class="text-box__description"
+            data-aos="fade-down-left"
+            data-aos-delay="200"
+          >
+            This is a solution to the Time tracking dashboard challenge on
+            Frontend Mentor. Users should be able to view the optimal layout for
+            the site depending on their device's screen size, see hover states
+            for all interactive elements on the page and switch between viewing
+            Daily, Weekly, and Monthly stats. I used HTML, CSS, Sass, Grid and
+            Javascript.
+          </p>
+        </div>
+        <div
+          class="btn-box btn-box--project"
+          data-aos="fade-down-left"
+          data-aos-delay="100"
+        >
+          <a
+            href="https://luka85.github.io/time-tracking-dashboard-solution/"
+            target="_blank"
+            class="btn btn--cta-card btn--project btn--view"
+          >
+            View Site
+            <svg class="btn__icon btn__icon--arrow">
+              <use
+                xlink:href="graphics/sprite.svg#icon-chevron-with-circle-right"
+              ></use>
+            </svg>
+          </a>
+          <a
+            href="https://github.com/Luka85/time-tracking-dashboard-solution"
+            target="_blank"
+            class="btn btn--cta-card btn--project btn--repo"
+          >
+            Repository
+            <svg class="btn__icon btn__icon--arrow">
+              <use
+                xlink:href="graphics/sprite.svg#icon-chevron-with-circle-right"
+              ></use>
+            </svg>
+          </a>
+        </div>
+        <!-- <div
+          class="text-box u-text-box-width text-box--2"
+          data-aos="fade-down-left"
+          data-aos-delay="100"
+        >
+          <h4
+            class="heading-quaternary u-margin-bottom"
+            data-aos="fade-down-right"
+            data-aos-delay="100"
+          >
+            Problems During The Process
+          </h4>
+          <p
+            class="text-box__description"
+            data-aos="fade-down-right"
+            data-aos-delay="200"
+          >
+            Processing the necessary code into the editor was the most complex
+            part of this process, we needed to update the object listing of the
+            elements everytime a user added, removed, or reordered any element.
+            This required complex state management in order to display the
+            proper html and css when exporting.
+          </p>
+        </div> -->
+
+        <div
+          class="section-project__image"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <img src="img/time_tracking_dashboard.png" alt="project image" />
+        </div>
+      </section>
+
+      <!-- ! FOOTER-->
+
+      <footer class="footer" id="footer">
+        <div class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="/#home" class="footer__link">Home</a>
+            </li>
+            <li class="footer__item">
+              <a href="/#section-about" class="footer__link">About</a>
+            </li>
+            <li class="footer__item">
+              <a href="/#section-skills" class="footer__link">Skills</a>
+            </li>
+            <li class="footer__item">
+              <a href="/#section-projects" class="footer__link">Projects</a>
+            </li>
+            <li class="footer__item">
+              <a href="/#section-form" class="footer__link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__logo-box">
+          <a href="#home" class="footer__logo-link">
+            <img
+              src="graphics/Logo_gradient.svg"
+              alt="Logo"
+              class="footer__logo"
+            />
+          </a>
+          <a
+            href="https://github.com/Luka85"
+            class="footer__logo-link"
+            target="_blank"
+          >
+            <svg class="footer__logo footer__logo--1">
+              <use xlink:href="graphics/sprite.svg#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer__copyright-box">
+          <p class="footer__copyright">© Luka Kikelj. All Rights Reserved</p>
+        </div>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+        duration: 800,
+        once: true,
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

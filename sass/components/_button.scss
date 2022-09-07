@@ -1,0 +1,158 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    border-radius: 0.4rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  &--cta {
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 1.3rem 3rem;
+    &:hover,
+    &:active {
+      color: $color-tertiary;
+      background-color: $color-primary;
+      @include shadowBlue;
+    }
+  }
+
+  &--cta-project {
+    color: $color-primary;
+    border: 3px solid $color-primary;
+    animation: slide-in-blurred-bottom 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-fill-mode: backwards;
+
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    @include respond(phone) {
+      font-weight: 800;
+    }
+  }
+  &--cta-contact {
+    color: $color-primary;
+    border: 3px solid $color-primary;
+    animation: slide-in-blurred-bottom 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-fill-mode: backwards;
+
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
+
+    @include respond(phone) {
+      font-weight: 800;
+    }
+  }
+
+  &--cta-card {
+    color: $color-tertiary;
+    border: 2px solid $color-tertiary;
+    font-size: inherit;
+    font-weight: 600;
+    padding: 1rem 3.5rem;
+    font-size: 1.8rem;
+
+    &:hover,
+    &:active {
+      color: $color-primary;
+      background-color: $color-tertiary;
+      font-weight: 700;
+
+      @include shadowWhite;
+    }
+  }
+
+  //!PROJECT SIDE
+  &--project {
+    color: $color-secondary;
+    border: 2px solid $color-secondary;
+
+    &:hover,
+    &:active {
+      color: $color-primary;
+      background-color: $color-secondary;
+      @include shadowGreen;
+    }
+  }
+
+  &--view {
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &--repo {
+    @include respond(tab-land) {
+      margin-left: 2rem;
+    }
+    @include respond(tab-port) {
+      margin-left: 0;
+    }
+  }
+
+  //!
+
+  &__icon {
+    height: 3rem;
+    width: 3rem;
+    fill: currentColor;
+    margin-left: 2rem;
+  }
+
+  &--form {
+    background-color: transparent;
+    color: $color-tertiary;
+    border: 2px solid $color-tertiary;
+    font-size: inherit;
+    margin-bottom: 2rem;
+
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: flex-start;
+    justify-self: flex-start;
+
+    @include respond(tab-port-sm) {
+      margin-top: 2rem;
+      align-self: center;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary;
+      background-color: $color-tertiary;
+      @include shadowWhite;
+    }
+  }
+}
+
+//!PROJECT SIDE
+.btn-box {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

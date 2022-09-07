@@ -1,0 +1,142 @@
+.form {
+  grid-column: 2 / 3;
+
+  display: grid;
+  grid-template-columns: 1fr repeat(2, minmax(40rem, 1fr)) 1fr;
+
+  grid-column-gap: 5rem;
+  grid-row-gap: 3rem;
+
+  @include respond(tab-land-lg) {
+    grid-template-columns: 1fr repeat(2, minmax(30rem, 1fr)) 1fr;
+  }
+
+  @include respond(tab-port-sm) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  &__right {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content) 1fr;
+    grid-row-gap: 3rem;
+
+    @include respond(tab-port-sm) {
+      text-align: center;
+      grid-column: 1 / 2;
+      grid-row: 5 / 6;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__group--1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    @include respond(tab-port-sm) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      align-items: flex-start;
+    }
+  }
+  &__group--2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    @include respond(tab-port-sm) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+  }
+  &__group--3 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+
+    @include respond(tab-port-sm) {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+  }
+  &__group--4 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    @include respond(tab-port-sm) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+  }
+
+  &__input {
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    font-weight: 600;
+    background-color: $color-blue-darker;
+    padding: 1.5rem 2rem;
+    border-radius: 0.3rem;
+    border: none;
+    border-bottom: 3px solid $color-tertiary-lighter;
+    width: 100%;
+    display: block;
+    resize: none;
+
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $color-secondary;
+    }
+
+    &:focus:invalid {
+      border-bottom: 4px solid $color-primary;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-darker;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    display: block;
+    color: $color-tertiary;
+    transition: all.3s;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: 0;
+    transform: translateY(-4rem);
+  }
+
+  &__input:placeholder-shown + &__label--3 {
+    opacity: 0;
+    visibility: 0;
+    transform: translateY(-12rem);
+  }
+  &__description {
+    font-size: 1.8rem;
+  }
+
+  &__succes-message {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    display: none;
+  }
+  &__failed-message {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    display: none;
+  }
+}

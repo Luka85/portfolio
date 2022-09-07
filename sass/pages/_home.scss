@@ -1,0 +1,219 @@
+.container {
+  width: 100%;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: 100vh repeat(5, min-content);
+  grid-template-columns:
+    [ful-start] minmax(6rem, 1fr) repeat(
+      10,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    minmax(6rem, 1fr) [ful-end];
+
+  @include respond(sm-desktop) {
+    grid-template-rows: 90vh repeat(5, min-content);
+  }
+}
+
+.section-about {
+  background-color: $color-tertiary;
+  color: $color-primary;
+
+  padding: 15rem 0;
+  grid-column: ful-start / ful-end;
+
+  display: grid;
+  grid-template-columns: 1fr 80% 1fr;
+  align-content: center;
+  justify-content: center;
+
+  ::selection {
+    background-color: $color-primary;
+    color: $color-tertiary;
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr 70% 1fr;
+  }
+  @include respond(phone) {
+    grid-template-columns: 1fr 75% 1fr;
+  }
+  @include respond(phone-sm) {
+    grid-template-columns: 1fr 80% 1fr;
+  }
+}
+.section-skills {
+  padding: 15rem 0;
+  background-color: $color-primary;
+
+  grid-column: ful-start / ful-end;
+
+  display: grid;
+  grid-template-columns: 1fr 80% 1fr;
+  grid-template-rows: repeat(2, min-content);
+  grid-row-gap: 5rem;
+  align-content: center;
+  justify-content: center;
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr 70% 1fr;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr 75% 1fr;
+  }
+  @include respond(phone-sm) {
+    grid-template-columns: 1fr 80% 1fr;
+  }
+}
+
+.icons-box {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+
+  grid-gap: 4rem;
+  justify-content: start;
+  align-content: center;
+
+  @include respond(sm-desktop) {
+    grid-gap: 3rem;
+  }
+  @include respond(tab-land-lg) {
+    grid-gap: 1.5rem;
+  }
+
+  @include respond(tab-land) {
+    grid-gap: 1rem;
+    grid-template-columns: repeat(5, minmax(14rem, 1fr));
+  }
+
+  @include respond(tab-port) {
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  }
+
+  @include respond(phone) {
+    // padding-right: 5vw;
+  }
+
+  &__item {
+    fill: $color-secondary;
+    color: $color-secondary;
+
+    border: 1px solid $color-secondary;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 3rem;
+    transition: translate scale 0.2s;
+
+    @include respond(tab-land-lg) {
+      padding: 3rem 2rem;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+
+      @include shadowGreen;
+    }
+
+    &--html {
+      animation: move-in-bottom 0.7s ease-out 0.4s;
+      animation-fill-mode: backwards;
+    }
+    &--css {
+      animation: move-in-bottom 0.7s ease-out 0.5s;
+      animation-fill-mode: backwards;
+    }
+    &--sass {
+      animation: move-in-bottom 0.7s ease-out 0.6s;
+      animation-fill-mode: backwards;
+    }
+    &--js {
+      animation: move-in-bottom 0.7s ease-out 0.7s;
+      animation-fill-mode: backwards;
+    }
+    &--git {
+      animation: move-in-bottom 0.7s ease-out 0.8s;
+      animation-fill-mode: backwards;
+    }
+  }
+
+  &__icon {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.section-projects {
+  padding: 8rem 0 10rem 0;
+  background-color: $color-tertiary;
+  color: $color-primary;
+
+  grid-column: ful-start / ful-end;
+
+  display: grid;
+  grid-template-columns: 1fr 80% 1fr;
+  grid-template-rows: repeat(2, min-content);
+
+  grid-column-gap: 5rem;
+  grid-row-gap: 2rem;
+  justify-content: center;
+  align-content: center;
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr 65% 1fr;
+  }
+  @include respond(tab-port-sm) {
+    grid-template-columns: 1fr 70% 1fr;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr 75% 1fr;
+  }
+  @include respond(phone-sm) {
+    grid-template-columns: 1fr 85% 1fr;
+  }
+
+  ::selection {
+    background-color: $color-primary;
+    color: $color-tertiary;
+  }
+}
+.section-form {
+  padding: 15rem 0;
+  @include backgroundPattern;
+  background: url("../graphics/pattern_gradient.svg"),
+    linear-gradient(to right bottom, $color-blue-lighter, $color-primary);
+  color: $color-tertiary;
+
+  grid-column: ful-start / ful-end;
+  display: grid;
+
+  grid-template-columns: 1fr 80% 1fr;
+  grid-template-rows: repeat(2, min-content);
+
+  grid-gap: 5rem;
+  justify-content: center;
+  align-content: center;
+
+  @include respond(tab-land-lg) {
+    grid-template-columns: 1fr 100% 1fr;
+  }
+  @include respond(tab-port-sm) {
+    grid-template-columns: 1fr;
+    padding: 15rem 10rem;
+    grid-gap: 2rem;
+  }
+  @include respond(phone) {
+    padding: 10rem 5rem;
+  }
+  @include respond(phone-sm) {
+    padding: 10rem 3rem;
+  }
+}
